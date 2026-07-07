@@ -17,7 +17,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		000000000000000000000120 /* AcademyHabitTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AcademyHabitTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000000000000000120 /* Ch3Group3HabitTrackerDio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ch3Group3HabitTrackerDio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2FC20E2FE2563E009E7DA4 /* HabitTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HabitTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -60,7 +60,7 @@
 		000000000000000000000020 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				000000000000000000000120 /* AcademyHabitTracker.app */,
+				000000000000000000000120 /* Ch3Group3HabitTrackerDio.app */,
 				CE2FC20E2FE2563E009E7DA4 /* HabitTrackerTests.xctest */,
 			);
 			name = Products;
@@ -84,7 +84,7 @@
 			);
 			name = HabitTracker;
 			productName = MyApp;
-			productReference = 000000000000000000000120 /* AcademyHabitTracker.app */;
+			productReference = 000000000000000000000120 /* Ch3Group3HabitTrackerDio.app */;
 			productType = "com.apple.product-type.application";
 		};
 		CE2FC20D2FE2563E009E7DA4 /* HabitTrackerTests */ = {
@@ -341,7 +341,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Ch3Group3HabitTracker;
-				PRODUCT_NAME = AcademyHabitTracker;
+				PRODUCT_NAME = Ch3Group3HabitTrackerDio;
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -383,7 +383,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Ch3Group3HabitTracker;
-				PRODUCT_NAME = AcademyHabitTracker;
+				PRODUCT_NAME = Ch3Group3HabitTrackerDio;
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -401,6 +401,7 @@
 		CE2FC2152FE2563E009E7DA4 /* Debug configuration for PBXNativeTarget "HabitTrackerTests" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -410,20 +411,22 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Ch3Group3HabitTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
+				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphonesimulator macosx iphoneos";
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ch3Group3HabitTracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ch3Group3HabitTracker";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ch3Group3HabitTrackerDio.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ch3Group3HabitTrackerDio";
 			};
 			name = Debug;
 		};
 		CE2FC2162FE2563E009E7DA4 /* Release configuration for PBXNativeTarget "HabitTrackerTests" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -433,14 +436,15 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Ch3Group3HabitTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
+				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphonesimulator macosx iphoneos";
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ch3Group3HabitTracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ch3Group3HabitTracker";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ch3Group3HabitTrackerDio.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ch3Group3HabitTrackerDio";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
