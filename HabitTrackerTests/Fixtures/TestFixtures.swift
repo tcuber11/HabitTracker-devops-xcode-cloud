@@ -1,5 +1,5 @@
 import Foundation
-@testable import AcademyHabitTracker
+@testable import Ch3Group3HabitTrackerDio
 
 // MARK: - Test Fixtures
 //
