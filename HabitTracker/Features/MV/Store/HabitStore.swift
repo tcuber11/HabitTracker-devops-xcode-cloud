@@ -106,15 +106,26 @@ final class HabitStore {
     // MARK: - Private
 
     private func refreshStatistics() async {
-        await withDiscardingTaskGroup { group in
+        // Compute statistics concurrently off the main actor, then apply the
+        // results back on the main actor to avoid mutating isolated state
+        // from within the task group's nonisolated closures.
+        let results = await withTaskGroup(of: (UUID, HabitStatistics)?.self) { group in
             for habit in habits {
-                group.addTask { [weak self] in
-                    guard let self else { return }
-                    if let stats = try? await generateStatisticsUseCase.execute(habit: habit) {
-                        statistics[habit.id] = stats
+                group.addTask { [generateStatisticsUseCase] in
+                    guard let stats = try? await generateStatisticsUseCase.execute(habit: habit) else {
+                        return nil
                     }
+                    return (habit.id, stats)
                 }
             }
+            var collected: [(UUID, HabitStatistics)] = []
+            for await result in group {
+                if let result { collected.append(result) }
+            }
+            return collected
+        }
+        for (id, stats) in results {
+            statistics[id] = stats
         }
     }
 }

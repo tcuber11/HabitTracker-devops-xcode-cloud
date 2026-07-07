@@ -2,7 +2,7 @@ import Foundation
 
 /// Describes how often a habit should be performed.
 /// Architecture-independent value type — no SwiftUI, SwiftData, or framework dependencies.
-enum HabitFrequency: Equatable, Codable, Sendable, Hashable {
+nonisolated enum HabitFrequency: Equatable, Codable, Sendable, Hashable {
     case daily
     case weekly(days: Set<Weekday>)
 
@@ -29,7 +29,7 @@ enum HabitFrequency: Equatable, Codable, Sendable, Hashable {
 
 // MARK: - Weekday
 
-enum Weekday: Int, CaseIterable, Codable, Sendable, Identifiable, Comparable {
+nonisolated enum Weekday: Int, CaseIterable, Codable, Sendable, Identifiable, Comparable {
     case sunday = 0
     case monday = 1
     case tuesday = 2
