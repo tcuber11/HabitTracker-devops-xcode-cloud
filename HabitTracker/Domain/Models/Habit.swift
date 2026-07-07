@@ -2,7 +2,7 @@ import Foundation
 
 /// The core domain model for a habit.
 /// Architecture-independent — pure Swift value type with no framework dependencies.
-struct Habit: Identifiable, Equatable, Sendable, Codable, Hashable {
+nonisolated struct Habit: Identifiable, Equatable, Sendable, Codable, Hashable {
     let id: UUID
     var name: String
     var habitDescription: String

@@ -2,7 +2,7 @@ import Foundation
 
 /// Aggregated statistics for a single habit.
 /// Computed by GenerateStatisticsUseCase — pure value type, no framework dependencies.
-struct HabitStatistics: Equatable, Sendable {
+nonisolated struct HabitStatistics: Equatable, Sendable {
     let habit: Habit
     let currentStreak: Int
     let longestStreak: Int
